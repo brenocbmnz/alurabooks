@@ -29,7 +29,12 @@
     display: none;
     position: absolute;
     top: 100%;
-    width: 60vw;
+    /* Position the menu below the "Categorias" item */
+    left: 0;
+    width: 200px;
+    background-color: var(--branco);
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .container__botao:checked~.lista-menu {
@@ -64,9 +69,26 @@
     display: none;
 }
 
+.opções__botão {
+    display: none;
+}
+
+.opções__botão:checked~.lista-menu {
+    display: block;
+}
+
+.opções__item {
+    position: relative;
+}
+
+.opções__item:focus-within .lista-menu {
+    display: block;
+}
+
 .opções {
     display: none;
 }
+
 
 
 
@@ -104,5 +126,24 @@
 
     .container__imagem-transparente {
         display: block;
+    }
+
+    .contato {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contato__titulo {
+        font-size: 24px;
+    }
+
+    .contato__descrição {
+        margin-right: 1em;
+        width: 30%;
+    }
+
+    .contato__email {
+        width: 30%;
     }
 }
